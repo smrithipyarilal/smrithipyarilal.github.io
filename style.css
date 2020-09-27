@@ -1,0 +1,819 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg{
+    background: url('website.jpg');
+    height: 100vh; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg .align-middle {
+    text-align: center;
+}
+
+/****************************************NAVIGATION BAR*********************************************/
+.navbar {
+  overflow: hidden;
+  background-color: black;
+    z-index: 3;
+  position: fixed;
+  top: 0;
+  width: 100%;
+    opacity: 0.5;
+    
+    
+}
+
+a.active {
+  float: left;
+  display: block;
+    
+  color: white;
+  text-align: center;
+  padding: 8px 26px;
+  text-decoration: none;
+  font-size: 20px;
+    float: right;
+    z-index: 5;
+    
+}
+
+a.active:hover {
+  transform: scale(1.5);
+      transition: transform 0.2s;
+}
+
+
+/****************************************NAME ANIMATION********************************************/
+.happy {
+    height: 3px;
+    background: white;
+    top: 50%;
+    position: absolute;
+    animation: mymove 2s forwards;
+    animation-delay: 1s;
+    margin: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @keyframes mymove {
+    from {
+      width: 0px;
+    }
+    to {
+      width: 400px;
+    }
+  }
+  /*The random line in the middle of the page*/
+
+  /*my name*/
+  .hero_heading{
+    /*border: 1px solid white;*/
+    color: white;
+    font-size: 40pt;
+    position: relative;
+    bottom: 380px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+    max-width: 400px;
+    /*font-family: 'Lora', serif;*/
+    font-family: 'Quicksand', sans-serif;
+    animation: text 1s forwards;
+    animation-delay: 2.2s;
+    opacity: 0;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0);
+}
+
+@keyframes text {
+    0%{
+
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100%{
+
+      opacity: 1;
+      transform: translateY(-60px);
+    }
+  }
+
+.links{
+    top: 50%;
+    position: absolute;
+    margin: 0;
+    left: 50%;
+    transform: translate(-50%, 30%);
+    
+}
+
+.social{
+    font-size:36px;
+    color: white;
+    animation: oopar 1s forwards;
+    animation-delay: 2.6s;
+    padding: 10px;
+    opacity: 0;
+    transition-timing-function: ease-in-out;
+}
+
+.social :hover{
+    transform: scale(1.5);
+    transition: transform .2s;
+}
+
+
+
+@keyframes oopar {
+    0%{
+
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100%{
+
+      opacity: 1;
+      transform: translateY(-60px);
+    }
+  }
+
+/****************************************************ABOUT ME************************************/
+
+.about{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24pt;
+    position: relative;
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 400px;
+    text-align: center;
+}
+
+img.urban{
+    height: 100%;
+    height:200px;
+    margin: 0 auto;
+    margin-left: 800px;
+    margin-right: auto;
+    
+}
+
+.element {
+    background:white;
+    margin-left:auto;
+    margin-right: auto;
+    position: relative;
+    max-width: 800px;
+    padding-top: 40px;
+    align-content: center;
+    
+}
+p.intro {
+    display:inline-block;
+    margin:0px;
+    width:70%;
+    background:white;
+    vertical-align:top;
+    font-family: 'Quicksand', sans-serif;
+    float: right;
+    margin-left:auto;
+    margin-right: auto;
+    position: relative;
+    
+    
+}
+img.me {
+    
+    display:inline-block;
+    vertical-align:middle;
+    height: 100%;
+    height: 204px;
+    float: left;
+    filter: grayscale(100%);
+    text-align: center;
+    border: 5px solid black;
+}
+
+img:hover{
+    display:inline-block;
+    vertical-align:middle;
+    height: 100%;
+    height: 204px;
+    float: left;
+    filter: grayscale(0%);
+}
+
+
+@media screen and (max-width: 600px) {
+  img.me {
+    font-family: 'Quicksand', sans-serif;
+    position: relative;
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 400px;
+    text-align: center;
+      margin-left: 150px;
+  
+  }
+    
+  p.intro {
+    background:white;
+    vertical-align:top;
+    font-family: 'Quicksand', sans-serif;
+    position: relative;
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 400px;
+    text-align: center;
+    padding-top: 40px;
+      padding-right:80px;
+      padding-left:80px;
+      
+    
+}  
+}
+
+ .button {
+  background-color: #000;
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+     border: 1px solid #fff;
+}
+
+.button:hover{
+    background-color: #fff;
+  border: 1px solid #000;
+  color: black;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.gap {
+    display:inline-block;
+    margin:0px;
+    width:100%;
+    background:white;
+    vertical-align:top;
+    font-family: 'Quicksand', sans-serif;
+    float: right;
+    margin-left:auto;
+    margin-right: auto;
+    position: relative;
+    padding-top: 100px;
+    
+}
+
+.about{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24pt;
+    position: relative;
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 400px;
+    text-align: center;
+}
+
+/************************************************EDUCATION******************************/
+
+.edu {
+    display:block;
+    margin:0px;
+    width:80%;
+    background: white;
+    vertical-align:top;
+    font-family: 'Quicksand', sans-serif;
+    /*Needed to move enitre box to right side, or els eit sticks to left edge becasue it will float on left side*/
+    float: right; 
+    margin-left:auto;
+    margin-right: auto;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-left: 2px solid grey;
+    margin-top: 30px;
+    
+}
+
+img.drexelPic{
+    display:block;
+    vertical-align:middle;
+    height: 100%;
+    height: 150px;
+    float: left;
+    text-align: center;
+    padding-left: 40px;
+    position: relative;
+}
+
+.drexelText{
+    max-width: 700px;
+    font-size: 16px;
+    padding-left:40px;
+    position: relative;
+    margin-left:auto;
+    margin-right:auto;
+    display: block;
+}
+
+img.iisjPic{
+    display:block;
+    vertical-align:bottom;
+    height: 100%;
+    height: 150px;
+    float: left;
+    text-align: left;
+    position: relative;
+    padding-top: 50px;
+    padding-left: 40px;
+}
+
+.iisjText{
+    max-width: 700px;
+    font-size: 16px;
+    padding-left:40px;
+    position: relative;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top: 50px;
+    
+}
+
+@media screen and (max-width: 600px) {
+    
+.edu {
+    display:inline-block;
+    margin:0px;
+    width:90%;
+    background: white;
+    vertical-align:top;
+    font-family: 'Quicksand', sans-serif;
+    /*Needed to move enitre box to right side, or els eit sticks to left edge becasue it will float on left side*/
+    float: right; 
+    margin-left:auto;
+    margin-right: auto;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-left: 2px solid grey;
+    margin-top: 30px;
+    
+}
+    
+  img.drexelPic{
+    display:inline-block;
+    vertical-align:middle;
+    height: 100%;
+    height: 200px;
+    float: left;
+    text-align: center;
+    padding-left: 20px;
+    position: relative;
+      margin-left: 80px;
+}
+    
+    .drexelText{
+    font-size: 16px;
+    padding-left:40px;
+    position: relative;
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 400px;
+    text-align: center;
+    padding-top: 250px;
+      padding-right:80px;
+      
+}
+    img.iisjPic{
+    display:inline-block;
+    vertical-align:middle;
+    height: 100%;
+    height: 200px;
+    float: left;
+    text-align: center;
+    padding-left: 20px;
+    position: relative;
+      margin-left: 80px;
+}
+    
+    .iisjText{
+    font-size: 16px;
+    padding-left:40px;
+    position: relative;
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 400px;
+    text-align: center;
+    padding-top: 300px;
+      padding-right:80px;
+      
+}
+}
+
+
+/*******************************************************PROJECTS*************************/
+
+.greyAbout{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 28pt;
+    position: relative;
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 400px;
+    text-align: center;
+    background-color: #C8C8C8;
+}
+
+.greyGap{
+    display:inline-block;
+    margin:0px;
+    width:100%;
+    background: #C8C8C8;
+    vertical-align:top;
+    font-family: 'Quicksand', sans-serif;
+    float: right;
+    margin-left:auto;
+    margin-right: auto;
+    position: relative;
+    padding-top: 100px;
+    
+}
+
+.grey {
+    display:inline-block;
+    margin:0;
+    width:100%;
+    background:#C8C8C8;
+    vertical-align:top;
+    font-family: 'Quicksand', sans-serif;
+    float: right;
+    margin-left:auto;
+    margin-right: auto;
+    position: relative;
+    padding-top: 0px;
+    
+    min-height: 100vh;
+  margin: 0;
+  color: #fff;
+  font-family: 'Poppins',sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+     box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 2rem 1.5rem;
+    background:#C8C8C8;
+    border: 2px solid #C8C8C8; /*Make the page background grey [to cover tincy gap between heading grey and cards grey]*/
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  cursor: pointer;
+  background-color: transparent;
+  height: 300px;
+  perspective: 1000px;
+  margin: 1rem;
+    width: 360px;
+  height: 300px;
+    
+}
+
+.card h3 {
+  border-bottom: 1px #fff solid;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 1.6rem;
+  word-spacing: 3px;
+    
+}
+
+.card p.proj{
+  opacity: 0.75;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.card img {
+  
+  /*object-fit: cover;*/
+  
+    
+}
+
+.card-inner {
+  position: relative;
+  width: 360px;
+  height: 100%;
+  transition: transform 0.9s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front{
+  position: absolute;
+  width: 360px;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+    border: 2px solid white;
+    background: white;
+    border-radius: 13px;
+}
+
+/*padding: 1.5rem;*/
+.card-back {
+    position: absolute;
+    width: 360px;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border:  solid #222;
+    background: white;
+    border-radius: 13px;
+    background-color: #222;
+    color: #fff;
+    transform: rotateY(180deg);
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+img.projects{
+    background: white;
+    height: 100%;
+    text-align: center;
+    width: 160px;
+    height: 160px;
+    padding: 60px;
+    vertical-align: middle;
+    margin: auto;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    backface-visibility: hidden;
+    
+}
+
+
+img.dragon{
+    background: white;
+    height: 100%;
+    text-align: center;
+    width: 160px;
+    height: 120px;
+    padding: 60px;
+    vertical-align: middle;
+    margin: auto;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    backface-visibility: hidden;
+    
+}
+
+img.jupyter{
+    background: white;
+    height: 100%;
+    text-align: center;
+    width: 160px;
+    height: 180px;
+    padding: 60px;
+    vertical-align: middle;
+    margin: auto;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    backface-visibility: hidden;
+    
+}
+
+img.bash{
+    background: white;
+    height: 100%;
+    text-align: center;
+    width: 230px;
+    height: 100px;
+    padding: 60px;
+    vertical-align: middle;
+    margin: auto;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    backface-visibility: hidden;
+    
+}
+
+a.code{
+    color: white;
+    
+}
+
+a.code :hover{
+    transform: scale(1.5);
+    transition: transform .2s ease-out;
+}
+
+
+/******************************************************CONTACT FORM**************/
+
+.blackgap {
+    display:inline-block;
+    margin:0px;
+    width:100%;
+    background:#343434;
+    vertical-align:top;
+    font-family: 'Quicksand', sans-serif;
+    float: right;
+    margin-left:auto;
+    margin-right: auto;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    
+}
+
+.contact{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24pt;
+    position: relative;
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 400px;
+    text-align: center;
+    color: white;
+}
+
+form{
+    
+    transition: all 4s ease-in-out;
+    margin-left:auto;
+    margin-right:auto;
+    position: relative;
+    width: 40%;
+    height: 65%;
+    border-radius: 16px;
+    
+    
+}
+
+.form-control{
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid grey;
+    color: #000;
+    font-size: 18px;
+    margin-bottom: 16px;
+    font-family: 'Quicksand', sans-serif;
+    
+}
+
+.form-control1{
+    height: 200px;
+    border-bottom: 1px solid gray;
+    width: 100%;
+    font-size: 18px;
+}
+input[type='text']{
+    height: 45px;
+    padding-top: 20px;
+    color:white;
+}
+
+input[type='email']{
+    height: 45px;
+    padding-top: 20px;
+    color:white;
+}
+
+textarea::placeholder{
+    font-family: 'Quicksand', sans-serif;color: green;
+    color: #343434;
+    font-weight: 900;
+}
+
+
+
+form .submit{
+    background-color: #fff;
+  border: 1px solid #000;
+  color: #343434;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 42px 2px;
+  cursor: pointer;
+    font-weight: 900;
+}
+
+form .submit:hover{
+    background-color: #343434;
+  border: none;
+  color: white;
+  padding: 10px 42px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 42px 2px;
+  cursor: pointer;
+     border: 1px solid #fff;
+    font-weight: 100;
+}
+
+
+
+.hi{
+    font-family: 'Chewy', cursive;
+    margin-left: 42%;
+    margin-top: 3%;
+    position: absolute;
+    font-size: 48pt;
+    color: grey;
+}
+
+.button {
+  background-color: #000;
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+     border: 1px solid #fff;
+}
+
+.button:hover{
+    background-color: #fff;
+  border: 1px solid #000;
+  color: black;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+/********************************************************FOOTER***********************/
+
+.footer{
+   margin-left:auto;
+    margin-right:auto;
+    position: relative; 
+    text-align: center;
+    color: #C1C0C0;
+}
